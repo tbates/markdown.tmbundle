@@ -7,6 +7,14 @@
 	<key>command</key>
 	<string>#!/usr/bin/env php
 &lt;?php
+//                       name: Heading 1(# style)
+//              fallbackInput: line
+//                      input: selection
+//               input format: Text
+//                     output: Replace Input
+//              output format: Snippet
+//                      scope: text.html.markdown
+//              keyEquivalent: cmd-1
 // Turn a line or selection into a heading
 // Created: 21.03.12 Author: timothy.c.bates@gmail.com
 // nb: Overrides existing cmd-n
@@ -28,6 +36,9 @@ if (0) {
 	echo "started with:\n&lt;font color=red&gt;\"$existing\"&lt;/font&gt;\n--&gt;\n";
 } else {
 	$existing = fread(STDIN, 1024);
+	// $existing = $_ENV["TM_SELECTED_TEXT"];
+	// $existing = $_ENV["TM_CURRENT_LINE"];
+	
 }
 
 $aLines = explode("\n", $existing);
@@ -48,6 +59,8 @@ foreach ($aLines as $key =&gt; $line) {
 echo implode("\n", $o);
 ?&gt;
 </string>
+	<key>fallbackInput</key>
+	<string>line</string>
 	<key>input</key>
 	<string>selection</string>
 	<key>inputFormat</key>
@@ -69,6 +82,6 @@ echo implode("\n", $o);
 	<key>uuid</key>
 	<string>5BB3CEFD-D327-4621-B221-54F674560D5E</string>
 	<key>version</key>
-	<integer>2</integer>
+	<string>2</string>
 </dict>
 </plist>

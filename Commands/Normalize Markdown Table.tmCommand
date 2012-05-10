@@ -7,12 +7,15 @@
 	<key>command</key>
 	<string>#!/usr/bin/python
 
+# This work is licensed under a Creative Commons Attribution-Share Alike 3.0 Unported License.
+# Dr. Drang
+# http://www.leancrew.com/all-this/2012/03/improved-markdown-table-commands-for-textmate/
+
 import sys
 
 def just(string, type, n):
     "Justify a string to length n according to type."
     
-    string = unicode(string, 'utf-8')
     if type == '::':
         return string.center(n)
     elif type == '-:':
@@ -31,18 +34,20 @@ def normtable(text):
     rows = len(lines)
     
     # Figure out the cell formatting.
-    # First, find the formatting line.
+    # First, find the separator line.
     for i in range(rows):
         if set(lines[i]).issubset('|:.-'):
             formatline = lines[i]
             formatrow = i
             break
     
-    # Delete the formatting line from the content.
+    # Delete the separator line from the content.
     del lines[formatrow]
     
-    # Determine how each column is to be justified. 
-    formatline = formatline.strip('| ')
+    # Determine how each column is to be justified.
+    formatline = formatline.strip(' ')
+    if formatline[0] == '|': formatline = formatline[1:]
+    if formatline[-1] == '|': formatline = formatline[:-1]
     fstrings = formatline.split('|')
     justify = []
     for cell in fstrings:
@@ -54,14 +59,16 @@ def normtable(text):
         else:
             justify.append(':-')
     
-    # Assume the number of columns in the format line is the number
+    # Assume the number of columns in the separator line is the number
     # for the entire table.
     columns = len(justify)
     
-    # Extract the content into a .
+    # Extract the content into a matrix.
     content = []
     for line in lines:
-        line = line.strip('| ')
+        line = line.strip(' ')
+        if line[0] == '|': line = line[1:]
+        if line[-1] == '|': line = line[:-1]
         cells = line.split('|')
         # Put exactly one space at each end as "bumpers."
         linecontent = [ ' ' + x.strip() + ' ' for x in cells ]
@@ -79,7 +86,7 @@ def normtable(text):
     widths = [2] * columns
     for row in content:
         for i in range(columns):
-            widths[i] = max(len(unicode(row[i], 'utf-8')), widths[i])
+            widths[i] = max(len(row[i]), widths[i])
     
     # Add whitespace to make all the columns the same width and 
     formatted = []
@@ -95,28 +102,24 @@ def normtable(text):
     # Return the formatted table.
     return '\n'.join(formatted)
 
-
+        
 # Read the input, process, and print.
 unformatted = sys.stdin.read()   
-print normtable(unformatted).encode('utf-8')
+print normtable(unformatted)
 </string>
+	<key>fallbackInput</key>
+	<string>none</string>
 	<key>input</key>
 	<string>selection</string>
-	<key>inputFormat</key>
-	<string>text</string>
+	<key>keyEquivalent</key>
+	<string>^~@t</string>
 	<key>name</key>
 	<string>Normalize Markdown Table</string>
-	<key>outputCaret</key>
-	<string>afterOutput</string>
-	<key>outputFormat</key>
-	<string>text</string>
-	<key>outputLocation</key>
-	<string>replaceInput</string>
+	<key>output</key>
+	<string>replaceSelectedText</string>
 	<key>scope</key>
-	<string>text.html.markdown markup.list</string>
+	<string>text.html.markdown</string>
 	<key>uuid</key>
-	<string>32E415CE-CFA6-42A6-BDC9-6AC838F7A56B</string>
-	<key>version</key>
-	<integer>2</integer>
+	<string>F26F1838-E653-4F41-8793-F44400669C21</string>
 </dict>
 </plist>

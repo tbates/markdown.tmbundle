@@ -8,15 +8,6 @@
 	<string>#!/usr/bin/env php
 
 &lt;?php
-//                       name: Heading 2(# style)
-//              fallbackInput: line
-//                      input: selection
-//               input format: Text
-//                     output: Replace Input
-//              output format: Snippet
-//                      scope: text.html.markdown
-//              keyEquivalent: cmd-2
-
 // Turn a line or selection into a heading
 // Created: 21.03.12 Author: timothy.c.bates@gmail.com
 // nb: Overrides existing cmd-n

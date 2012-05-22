@@ -11,6 +11,8 @@
 </string>
 	<key>name</key>
 	<string>Include mathjax</string>
+	<key>scope</key>
+	<string>text.html.markdown</string>
 	<key>tabTrigger</key>
 	<string>mathjax</string>
 	<key>uuid</key>

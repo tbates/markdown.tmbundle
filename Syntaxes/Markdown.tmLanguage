@@ -85,6 +85,32 @@
 					<key>while</key>
 					<string>(^|\G)(&gt;) ?</string>
 				</dict>
+				<key>fencedCodeBlock</key>
+				<dict>
+					<key>begin</key>
+					<string>^(```R)</string>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.quote.codeblock.markdown</string>
+						</dict>
+					</dict>
+					<key>contentName</key>
+					<string>entity.name.section.markdown</string>
+					<key>end</key>
+					<string>^(```) ?$\n?</string>
+					<key>name</key>
+					<string>punctuation.definition.quote.codeblock.markdown</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>source.R</string>
+						</dict>
+					</array>
+				</dict>
 				<key>heading</key>
 				<dict>
 					<key>begin</key>

@@ -8,6 +8,7 @@
 		<string>markdown</string>
 		<string>markdn</string>
 		<string>md</string>
+		<string>Rmd</string>
 	</array>
 	<key>keyEquivalent</key>
 	<string>^~M</string>
@@ -26,6 +27,10 @@
 		<dict>
 			<key>patterns</key>
 			<array>
+				<dict>
+					<key>include</key>
+					<string>#fencedCodeBlock</string>
+				</dict>
 				<dict>
 					<key>include</key>
 					<string>#separator</string>
@@ -87,27 +92,35 @@
 				</dict>
 				<key>fencedCodeBlock</key>
 				<dict>
-					<key>begin</key>
-					<string>^(```R)</string>
-					<key>captures</key>
-					<dict>
-						<key>1</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.quote.codeblock.markdown</string>
-						</dict>
-					</dict>
-					<key>contentName</key>
-					<string>entity.name.section.markdown</string>
-					<key>end</key>
-					<string>^(```) ?$\n?</string>
-					<key>name</key>
-					<string>punctuation.definition.quote.codeblock.markdown</string>
 					<key>patterns</key>
 					<array>
 						<dict>
-							<key>include</key>
-							<string>source.R</string>
+							<key>begin</key>
+							<string>^(\`\`\`) ?(R|\{r.*?\})?</string>
+							<key>beginCaptures</key>
+							<dict>
+								<key>1</key>
+								<dict>
+									<key>name</key>
+									<string>punctuation.definition.quote.codeblock.markdown</string>
+								</dict>
+								<key>2</key>
+								<dict>
+									<key>name</key>
+									<string>punctuation.definition.language.markdown</string>
+								</dict>
+							</dict>
+							<key>end</key>
+							<string>^(\`\`\`)</string>
+							<key>name</key>
+							<string>entity.name.section.codeblock.markdown</string>
+							<key>patterns</key>
+							<array>
+								<dict>
+									<key>include</key>
+									<string>source.r</string>
+								</dict>
+							</array>
 						</dict>
 					</array>
 				</dict>

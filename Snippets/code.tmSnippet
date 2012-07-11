@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>```${1:R}
-    ${2:code here}
-```
+	<string>\`\`\`${1:R}
+    ${2:$TM_SELECTED_TEXT}
+\`\`\`
 </string>
 	<key>name</key>
 	<string>code</string>

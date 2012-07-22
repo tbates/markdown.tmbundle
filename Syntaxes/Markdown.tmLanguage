@@ -29,6 +29,10 @@
 			<array>
 				<dict>
 					<key>include</key>
+					<string>#badList</string>
+				</dict>
+				<dict>
+					<key>include</key>
 					<string>#fencedCodeBlock</string>
 				</dict>
 				<dict>
@@ -66,6 +70,13 @@
 			</array>
 			<key>repository</key>
 			<dict>
+				<key>badList</key>
+				<dict>
+					<key>match</key>
+					<string>^[\t ]+[0-9]+(?!\.)</string>
+					<key>name</key>
+					<string>invalid.illegal.punctuation.markdown</string>
+				</dict>
 				<key>blockquote</key>
 				<dict>
 					<key>begin</key>

@@ -124,7 +124,7 @@
 							<key>end</key>
 							<string>^(\`\`\`)</string>
 							<key>name</key>
-							<string>entity.name.section.codeblock.markdown</string>
+							<string>source.r.embedded</string>
 							<key>patterns</key>
 							<array>
 								<dict>

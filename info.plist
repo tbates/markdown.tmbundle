@@ -19,7 +19,7 @@
 		<string>4AB16529-60A5-4CE7-8E97-B0785CAF87C4</string>
 	</array>
 	<key>description</key>
-	<string>&lt;a href="http://daringfireball.net/projects/markdown/"&gt;Markdown&lt;/a&gt; allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML. This bundle provides preview functionality, syntax highlighting, and several useful commands.</string>
+	<string>&lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot;&gt;Markdown&lt;/a&gt; allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML. This bundle provides preview functionality, syntax highlighting, and several useful commands.</string>
 	<key>mainMenu</key>
 	<dict>
 		<key>items</key>
@@ -54,6 +54,7 @@
 			<dict>
 				<key>items</key>
 				<array>
+					<string>81EE56B3-6E80-457F-A3BB-5274ECDD9E37</string>
 					<string>F26F1838-E653-4F41-8793-F44400669C21</string>
 				</array>
 				<key>name</key>

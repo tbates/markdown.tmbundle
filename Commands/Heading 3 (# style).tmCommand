@@ -38,7 +38,7 @@ foreach ($aLines as $key =&gt; $line) {
 		if ($l&gt;1) {
 			$o[] = "";
 		}else{
-			$o[] = "$level \${1:Level 1 heading}";
+			$o[] = "$newLevel \${1:Heading}";
 		}
 	} else {
 		$new = trim ( $line, "#* $level" ); //trim ends of existing markers
@@ -71,6 +71,6 @@ echo implode("\n", $o);
 	<key>uuid</key>
 	<string>C0082FD8-DF1C-49A1-A9AB-076DF8981490</string>
 	<key>version</key>
-	<string>2</string>
+	<integer>2</integer>
 </dict>
 </plist>

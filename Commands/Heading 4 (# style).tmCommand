@@ -6,7 +6,6 @@
 	<string>nop</string>
 	<key>command</key>
 	<string>#!/usr/bin/env php
-
 &lt;?php
 // Turn a line or selection into a heading
 // Created: 21.03.12 Author: timothy.c.bates@gmail.com
@@ -14,7 +13,7 @@
 // Also Works on lines that already have a heading applied
 
 $level    = '#';
-$newLevel = str_repeat($level, 2); // Change this to alter the level being affected
+$newLevel = str_repeat($level, 4); // Change this to alter the level being affected
 $o        = array();
 
 if (0) { 
@@ -49,16 +48,14 @@ foreach ($aLines as $key =&gt; $line) {
 echo implode("\n", $o);
 ?&gt;
 </string>
-	<key>fallbackInput</key>
-	<string>line</string>
 	<key>input</key>
 	<string>selection</string>
 	<key>inputFormat</key>
 	<string>text</string>
 	<key>keyEquivalent</key>
-	<string>@2</string>
+	<string>@4</string>
 	<key>name</key>
-	<string>Heading 2 (# style)</string>
+	<string>Heading 4 (# style)</string>
 	<key>outputCaret</key>
 	<string>afterOutput</string>
 	<key>outputFormat</key>
@@ -66,11 +63,11 @@ echo implode("\n", $o);
 	<key>outputLocation</key>
 	<string>replaceInput</string>
 	<key>scope</key>
-	<string>text.html.markdown -meta.disable-markdown</string>
+	<string>text.html.markdown</string>
 	<key>tabTrigger</key>
 	<string>#</string>
 	<key>uuid</key>
-	<string>D2883438-1037-4792-93CB-CCBABECB45D8</string>
+	<string>9EE55686-A342-4830-9E32-9555EA844EDC</string>
 	<key>version</key>
 	<integer>2</integer>
 </dict>

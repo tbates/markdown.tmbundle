@@ -6,7 +6,6 @@
 	<string>nop</string>
 	<key>command</key>
 	<string>#!/usr/bin/env php
-
 &lt;?php
 // Turn a line or selection into a heading
 // Created: 21.03.12 Author: timothy.c.bates@gmail.com
@@ -34,7 +33,7 @@ if (0) {
 $aLines = explode("\n", $existing);
 $l = count($aLines);
 foreach ($aLines as $key =&gt; $line) {
-	$line = trim ( $line);
+	$line = trim ($line);
 	if (empty($line)) {
 		if ($l&gt;1) {
 			$o[] = "";
@@ -47,8 +46,7 @@ foreach ($aLines as $key =&gt; $line) {
 	}
 }
 echo implode("\n", $o);
-?&gt;
-</string>
+?&gt;</string>
 	<key>fallbackInput</key>
 	<string>line</string>
 	<key>input</key>

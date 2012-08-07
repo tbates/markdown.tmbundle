@@ -33,7 +33,7 @@ if (0) {
 $aLines = explode("\n", $existing);
 $l = count($aLines);
 foreach ($aLines as $key =&gt; $line) {
-	$line = trim ( $line);
+	$line = trim ($line);
 	if (empty($line)) {
 		if ($l&gt;1) {
 			$o[] = "";
@@ -65,7 +65,7 @@ echo implode("\n", $o);
 	<key>outputLocation</key>
 	<string>replaceInput</string>
 	<key>scope</key>
-	<string>text.html.markdown</string>
+	<string>text.html.markdown -meta.disable-markdown</string>
 	<key>tabTrigger</key>
 	<string>#</string>
 	<key>uuid</key>

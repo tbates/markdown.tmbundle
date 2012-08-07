@@ -12,7 +12,7 @@
 // nb: Overrides existing cmd-n
 // Also Works on lines that already have a heading applied
 
-$level    = '#';
+$level    = '#'; 
 $newLevel = str_repeat($level, 1); // Change this to alter the level being affected
 $o        = array();
 
@@ -36,12 +36,12 @@ if (0) {
 $aLines = explode("\n", $existing);
 $l = count($aLines);
 foreach ($aLines as $key =&gt; $line) {
-	$line = trim ( $line);
+	$line = trim ($line);
 	if (empty($line)) {
 		if ($l&gt;1) {
 			$o[] = "";
 		}else{
-			$o[] = "$level \${1:Level 1 heading}";
+			$o[] = "$newLevel \${1:Heading}";
 		}
 	} else {
 		$new = trim ( $line, "#* $level" ); //trim ends of existing markers
@@ -74,6 +74,6 @@ echo implode("\n", $o);
 	<key>uuid</key>
 	<string>5BB3CEFD-D327-4621-B221-54F674560D5E</string>
 	<key>version</key>
-	<string>2</string>
+	<integer>2</integer>
 </dict>
 </plist>

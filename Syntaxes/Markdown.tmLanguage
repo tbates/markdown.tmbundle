@@ -29,6 +29,14 @@
 			<array>
 				<dict>
 					<key>include</key>
+					<string>#badList</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#fencedCodeBlock</string>
+				</dict>
+				<dict>
+					<key>include</key>
 					<string>#separator</string>
 				</dict>
 				<dict>
@@ -62,6 +70,13 @@
 			</array>
 			<key>repository</key>
 			<dict>
+				<key>badList</key>
+				<dict>
+					<key>match</key>
+					<string>^[\t ]+[0-9]+(?!\.)</string>
+					<key>name</key>
+					<string>invalid.illegal.punctuation.markdown</string>
+				</dict>
 				<key>blockquote</key>
 				<dict>
 					<key>begin</key>
@@ -85,6 +100,40 @@
 					</array>
 					<key>while</key>
 					<string>(^|\G)(&gt;) ?</string>
+				</dict>
+				<key>fencedCodeBlock</key>
+				<dict>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>begin</key>
+							<string>^(\`\`\`) ?(R|\{r.*?\})?</string>
+							<key>beginCaptures</key>
+							<dict>
+								<key>1</key>
+								<dict>
+									<key>name</key>
+									<string>punctuation.definition.quote.codeblock.markdown</string>
+								</dict>
+								<key>2</key>
+								<dict>
+									<key>name</key>
+									<string>punctuation.definition.language.markdown</string>
+								</dict>
+							</dict>
+							<key>end</key>
+							<string>^(\`\`\`)</string>
+							<key>name</key>
+							<string>source.r.embedded</string>
+							<key>patterns</key>
+							<array>
+								<dict>
+									<key>include</key>
+									<string>source.r</string>
+								</dict>
+							</array>
+						</dict>
+					</array>
 				</dict>
 				<key>heading</key>
 				<dict>
@@ -240,8 +289,8 @@
 									(&lt;?)(\S+?)(&gt;?)			# The url
 									[ \t]*					# Optional whitespace
 									(?:
-										  ((\().+?(\)))		# Match title in quotes…
-										| ((").+?("))		# or in parens.
+										  ((\().+?(\)))		# Match title in parens…
+										| ((").+?("))		# or in quotes
 									)?						# Title is optional
 									\s*						# Optional whitespace
 									$

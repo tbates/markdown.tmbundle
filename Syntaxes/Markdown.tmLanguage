@@ -8,6 +8,7 @@
 		<string>mdown</string>
 		<string>markdown</string>
 		<string>markdn</string>
+		<string>Rmd</string>
 	</array>
 	<key>keyEquivalent</key>
 	<string>^~M</string>

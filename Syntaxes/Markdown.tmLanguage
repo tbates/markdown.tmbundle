@@ -107,7 +107,7 @@
 					<array>
 						<dict>
 							<key>begin</key>
-							<string>^(\`\`\`) ?(R|\{r.*?\})?</string>
+							<string>^[ \t]*(\`\`\`) ?(R|\{r.*?\})?</string>
 							<key>beginCaptures</key>
 							<dict>
 								<key>1</key>
@@ -122,7 +122,7 @@
 								</dict>
 							</dict>
 							<key>end</key>
-							<string>^(\`\`\`)</string>
+							<string>^[ \t]*(\`\`\`)</string>
 							<key>name</key>
 							<string>source.r.embedded</string>
 							<key>patterns</key>

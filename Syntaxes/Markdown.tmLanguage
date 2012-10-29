@@ -284,10 +284,10 @@
 					<key>match</key>
 					<string>^(?x:
 									\s*						# Leading whitespace
-									(\[)(.+?)(\])(:)		# Reference name
-									[ \t]*					# Optional whitespace
-									(&lt;?)(\S+?)(&gt;?)			# The url
-									[ \t]*					# Optional whitespace
+									(\[)(.+?)(\])(:)		# Reference name in square brackets
+									[ \t]*					# Optional whitespace separating name and URL
+									(&lt;?)(\S+?)(&gt;?)			# The url in round brackets
+									[ \t]*					# Optional whitespace: really?
 									(?:
 										  ((\().+?(\)))		# Match title in parens…
 										| ((").+?("))		# or in quotes

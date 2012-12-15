@@ -5,7 +5,7 @@
 	<key>content</key>
 	<string>&lt;sup&gt;${1:2}&lt;/sup&gt;$0</string>
 	<key>name</key>
-	<string>^(2,3...)</string>
+	<string>Superscript (^2)</string>
 	<key>scope</key>
 	<string>text.html -meta.disable-markdown</string>
 	<key>tabTrigger</key>

@@ -13,9 +13,9 @@
 		<key>items</key>
 		<array>
 			<string>B52DEA16-8480-11D9-BE59-000D93B3A10E</string>
+			<string>02458127-5199-4566-B246-BD4888543D5B</string>
 			<string>966B0E57-799A-4B91-84B4-75695A78F7B8</string>
 			<string>FE31CF79-5F04-4FB6-B5CE-70BC781FF8B5</string>
-			<string>C70F0881-D108-47B1-A06F-09C74954E5C2</string>
 			<string>------------------------------------</string>
 			<string>914B78B7-3C9E-4630-8BFC-665A358FB49B</string>
 			<string>A2A156BD-7EC9-4CBD-AC89-127972AE6794</string>
@@ -23,8 +23,7 @@
 			<string>A6E74A5E-FFE9-43FA-8936-970F3CE47DCB</string>
 			<string>350477DF-B66B-49E8-8A31-CF26C2AD745D</string>
 			<string>1D28781D-7E85-4577-A48F-AB082C4A34B1</string>
-			<string>------------------------------------</string>
-			<string>4405912F-4AD5-40F8-93B3-A63394036ACA</string>
+			<string>8532EB39-4E8D-432D-A699-B56AE66C7390</string>			
 		</array>
 		<key>submenus</key>
 		<dict>
@@ -32,21 +31,38 @@
 			<dict>
 				<key>items</key>
 				<array>
+					<string>4405912F-4AD5-40F8-93B3-A63394036ACA</string>
 					<string>ECF95C69-08CD-450F-80A8-344ABAA0355D</string>
 					<string>864ED863-A6EA-470B-82E9-53C365B3D293</string>
 					<string>DED2B784-6795-499A-843D-33D4AA628080</string>
 					<string>CEB068AC-B01B-48CD-B48B-78CA470E0752</string>
+					<string>1E9F7153-B12F-4E45-BEE7-EA221FFC4AE4</string>
 				</array>
 				<key>name</key>
 				<string>Insert Tag</string>
 			</dict>
 
+			<key>8532EB39-4E8D-432D-A699-B56AE66C7390</key>
+			<dict>
+				<key>name</key>
+				<string>Links</string>
+				<key>items</key>
+				<array>
+					<string>C70F0881-D108-47B1-A06F-09C74954E5C2</string>
+					<string>A62D9EFB-5591-4760-B862-A04607ABFBA9</string>
+					<string>B2345092-190C-4658-98EB-68202BF38C64</string>
+					<string>A9482998-0340-44AA-B87D-86CB462F952C</string>
+					<string>C70F0881-D108-47B1-A06F-09C74954E5C2</string>
+				</array>
+			</dict>
+			
 			<key>1D28781D-7E85-4577-A48F-AB082C4A34B1</key>
 			<dict>
 				<key>items</key>
 				<array>
 					<string>81EE56B3-6E80-457F-A3BB-5274ECDD9E37</string>
 					<string>F26F1838-E653-4F41-8793-F44400669C21</string>
+					<string>2DA37A29-78E6-4A5D-AB91-B1283C084D59</string>
 				</array>
 				<key>name</key>
 				<string>Tables</string>

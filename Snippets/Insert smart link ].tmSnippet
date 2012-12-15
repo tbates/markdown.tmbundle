@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>[${1:text to link}](!${2|--DEFINE--,wiki,def,--GENERAL--,g,--SITE--,github.com,--SOFTWARE--,mas,masd,itu,itud,s,--MUSIC--,isong,iart,ialb,lsong,lart|} ${3:"${4:optional search text}"})</string>
+	<string>](!${2|--DEFINE--,wiki,def,--GENERAL--,g,--SITE--,github.com,--SOFTWARE--,mas,masd,itu,itud,s,--MUSIC--,isong,iart,ialb,lsong,lart|} ${3:"${4:optional search text}"})</string>
 	<key>name</key>
 	<string>Insert smart link</string>
 	<key>scope</key>
 	<string>text.html.markdown</string>
 	<key>tabTrigger</key>
-	<string>l</string>
+	<string>]</string>
 	<key>uuid</key>
-	<string>A62D9EFB-5591-4760-B862-A04607ABFBA9</string>
+	<string>EAB95F98-E67E-459D-9D71-D11AD243699B</string>
 </dict>
 </plist>

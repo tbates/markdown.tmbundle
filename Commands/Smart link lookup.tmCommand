@@ -12,7 +12,6 @@ $: &lt;&lt; ENV['TM_BUNDLE_SUPPORT']
 require 'net/https'
 require 'rubygems'
 require "#{ENV['TM_BUNDLE_SUPPORT']}/json"
-# require 'YAML'
 require 'cgi'
 
 # set to true to force inline links
@@ -46,10 +45,10 @@ def zero_click(terms)
 	res = Net::HTTP.get_response(url).body
 	result = JSON.parse(res)
 	if result
-		definition = result['Definition'] || false
+		definition      = result['Definition']    || false
 		definition_link = result['DefinitionURL'] || false
-		wiki_link = result['AbstractURL'] || false
-		title = result['Heading'] || false
+		wiki_link       = result['AbstractURL']   || false
+		title           = result['Heading']       || false
 		return [title, definition, definition_link, wiki_link]
 	else
 		return false
@@ -151,7 +150,7 @@ input.gsub!(/\[(.*?)\]\((\!.+?)\)/) do |match|
 		search_terms = link_text
 	end
 
-	url = false
+	url   = false
 	title = false
 
 	case search_type

@@ -13,7 +13,7 @@ New section   |     More      |         Data |
 And more      |            And more          |
 [Prototype table]</string>
 	<key>name</key>
-	<string>Table</string>
+	<string>Insert Table</string>
 	<key>scope</key>
 	<string>text.html.markdown</string>
 	<key>tabTrigger</key>

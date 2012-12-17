@@ -18,8 +18,10 @@ printf "|" . "--|"x($n+1) . "\n" if $. == 2</string>
 	<string>selection</string>
 	<key>inputFormat</key>
 	<string>text</string>
+	<key>keyEquivalent</key>
+	<string>^~@t</string>
 	<key>name</key>
-	<string>Reformat tabbed text to | delimited</string>
+	<string>Tabbed text -&gt; Table</string>
 	<key>outputCaret</key>
 	<string>afterOutput</string>
 	<key>outputFormat</key>

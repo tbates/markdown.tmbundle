@@ -4,14 +4,14 @@
 <dict>
 	<key>content</key>
 	<string>|             |          Grouping           ||
-First Header  | Second Header | Third Header |
- ------------ | :-----------: | -----------: |
-Content       |          *Long Cell*        ||
-Content       |   **Cell**    |         Cell |
+| First Header  | Second Header | Third Header |
+|------------|:-----------:|-----------:|
+| Content       |          *Long Cell*        ||
+| Content       |   **Cell**    |         Cell |
 
-New section   |     More      |         Data |
-And more      |            And more          |
-[Prototype table]</string>
+| New section   |     More      |         Data |
+| And more      |            And more         ||
+[ Table Caption ]</string>
 	<key>name</key>
 	<string>Insert Table</string>
 	<key>scope</key>

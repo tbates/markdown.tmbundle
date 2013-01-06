@@ -3,18 +3,34 @@
 <plist version="1.0">
 <dict>
 	<key>beforeRunningCommand</key>
-	<string>nop</string>
+	<string>saveActiveFile</string>
 	<key>command</key>
-	<string>#!/bin/bash
-#                      input: nothing
-#              keyEquivalent: ^~m
-#                       name: Open in Marked
-#                     output: tooltip
-#                      scope: text.html.markdown, text.html.markdown.multimarkdown, text.html
-#
-# source "$TM_SUPPORT_PATH/lib/bash_init.sh" # might not be necessary
-open -a Marked.app "$TM_FILEPATH"
-osascript -e 'tell application "Marked" to activate'
+	<string>#!/usr/bin/env ruby
+require ENV["TM_SUPPORT_PATH"] + "/lib/tm/executor"
+require ENV["TM_SUPPORT_PATH"] + "/lib/tm/save_current_document"
+
+def save_untitled_document
+  ENV['TM_FILEPATH']         = TextMate::IO.tempfile('rb').path
+  ENV['TM_FILENAME']         = File.basename(ENV['TM_FILEPATH'])
+  ENV['TM_FILE_IS_UNTITLED'] = 'true'
+
+  begin
+    Dir.chdir(File.dirname(ENV["TM_FILEPATH"]))
+    open(ENV['TM_FILEPATH'], 'w') { |io| io &lt;&lt; STDIN.read }
+  rescue e
+    abort "Failed to save document as ‘#{ENV['TM_FILEPATH']}’: #{e}"
+  end
+end
+
+save_untitled_document if ENV['TM_FILEPATH'].nil?
+
+`open -a Marked.app "#{ENV['TM_FILEPATH']}"`
+ 
+# #!/usr/bin/env bash
+# [[ -f "${TM_SUPPORT_PATH}/lib/bash_init.sh" ]] &amp;&amp; . "${TM_SUPPORT_PATH}/lib/bash_init.sh"
+# open -a Marked.app "$TM_FILEPATH"
+# osascript -e 'tell application "Marked" to activate'  &amp;&gt; /dev/null &amp;
+
 </string>
 	<key>input</key>
 	<string>none</string>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>1. html-&gt; markdown
+* [converter library](http://neocotic.com/html.md)
+2. Syntax highlighting
+* [highlighting](http://www.gnu.org/software/src-highlite/)
+* [http://bl.ocks.org
+</string>
+	<key>name</key>
+	<string>todo list</string>
+	<key>scope</key>
+	<string>text.html.markdown</string>
+	<key>uuid</key>
+	<string>1DD138D0-6AFB-4D39-801F-0CDEBBA1F1C0</string>
+</dict>
+</plist>

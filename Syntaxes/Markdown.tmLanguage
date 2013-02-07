@@ -353,7 +353,7 @@
 								</dict>
 							</array>
 							<key>while</key>
-							<string>\G([ ]{4}|\t|$)</string>
+							<string>\G([ \t]$)</string>
 						</dict>
 						<dict>
 							<key>begin</key>

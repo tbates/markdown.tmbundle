@@ -24,7 +24,7 @@ end
 
 save_untitled_document if ENV['TM_FILEPATH'].nil?
 
-`open -a Marked.app "#{ENV['TM_FILEPATH']}" &amp;&gt; /dev/null &amp;`
+`open -a Marked.app "#{ENV['TM_FILEPATH']}"`
  
 # #!/usr/bin/env bash
 # [[ -f "${TM_SUPPORT_PATH}/lib/bash_init.sh" ]] &amp;&amp; . "${TM_SUPPORT_PATH}/lib/bash_init.sh"

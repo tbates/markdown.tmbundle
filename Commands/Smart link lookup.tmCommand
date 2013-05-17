@@ -238,6 +238,8 @@ end
 	<string>selection</string>
 	<key>inputFormat</key>
 	<string>text</string>
+	<key>keyEquivalent</key>
+	<string>^K</string>
 	<key>name</key>
 	<string>Replace smart-links</string>
 	<key>outputCaret</key>

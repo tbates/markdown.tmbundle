@@ -41,6 +41,10 @@
 				</dict>
 				<dict>
 					<key>include</key>
+					<string>#tableHeading</string>
+				</dict>
+				<dict>
+					<key>include</key>
 					<string>#heading</string>
 				</dict>
 				<dict>
@@ -423,6 +427,13 @@
 					<string>(^|\G)[ ]{,3}([-*_])([ ]{,2}\2){2,}[ \t]*$\n?</string>
 					<key>name</key>
 					<string>meta.separator.markdown</string>
+				</dict>
+				<key>tableHeading</key>
+				<dict>
+					<key>match</key>
+					<string>^(\[).+(\])$</string>
+					<key>name</key>
+					<string>markup.heading.2.table.heading.markdown</string>
 				</dict>
 			</dict>
 		</dict>

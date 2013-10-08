@@ -29,6 +29,10 @@
 			<array>
 				<dict>
 					<key>include</key>
+					<string>#tableRow</string>
+				</dict>
+				<dict>
+					<key>include</key>
 					<string>#badList</string>
 				</dict>
 				<dict>
@@ -305,7 +309,7 @@
 				<key>list_paragraph</key>
 				<dict>
 					<key>begin</key>
-					<string>(^|\G)(?=\S)(?![*+-]\s|[0-9]+\.\s)</string>
+					<string>(^|\G)(?=\S)(?![*+-\|]\s|[0-9]+\.\s)</string>
 					<key>name</key>
 					<string>meta.paragraph.markdown</string>
 					<key>patterns</key>
@@ -435,12 +439,23 @@
 					<key>name</key>
 					<string>markup.heading.2.table.heading.markdown</string>
 				</dict>
+				<key>tableRow</key>
+				<dict>
+					<key>match</key>
+					<string>^(?=\|).*$</string>
+					<key>name</key>
+					<string>meta.paragraph.tableRow.markdown</string>
+				</dict>
 			</dict>
 		</dict>
 		<key>inline</key>
 		<dict>
 			<key>patterns</key>
 			<array>
+				<dict>
+					<key>include</key>
+					<string>#tableHeading</string>
+				</dict>
 				<dict>
 					<key>include</key>
 					<string>#ampersand</string>

@@ -3,14 +3,16 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>1. html-&gt; markdown
-* [converter library](http://neocotic.com/html.md)
-</string>
+	<string>\`\`\`${1|splus,ruby|}
+    ${5:$TM_SELECTED_TEXT}
+\`\`\`</string>
 	<key>name</key>
-	<string>todo list</string>
+	<string>code splus</string>
 	<key>scope</key>
 	<string>text.html.markdown</string>
+	<key>tabTrigger</key>
+	<string>code</string>
 	<key>uuid</key>
-	<string>1DD138D0-6AFB-4D39-801F-0CDEBBA1F1C0</string>
+	<string>BF645D58-62F1-46FD-8FB1-45003424DDD6</string>
 </dict>
 </plist>

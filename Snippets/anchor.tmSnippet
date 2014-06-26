@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>1. html-&gt; markdown
-* [converter library](http://neocotic.com/html.md)
-</string>
+	<string>&lt;a name="${1:anchor}"&gt;&lt;/a&gt;$0</string>
 	<key>name</key>
-	<string>todo list</string>
+	<string>anchor</string>
 	<key>scope</key>
 	<string>text.html.markdown</string>
+	<key>tabTrigger</key>
+	<string>a</string>
 	<key>uuid</key>
-	<string>1DD138D0-6AFB-4D39-801F-0CDEBBA1F1C0</string>
+	<string>8E0C5B67-373E-4DF2-AFA4-2332246F79D3</string>
 </dict>
 </plist>

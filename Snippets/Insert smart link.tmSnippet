@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>[${1:text to link}](!${2|--DEFINE--,wiki,def,--GENERAL--,g,--SITE--,github.com,--SOFTWARE--,mas,masd,itu,itud,s,--MUSIC--,isong,iart,ialb,lsong,lart|} ${3:"${4:optional search text}"})</string>
+	<string>[${1:text to link}](!${2|--DEFINE--,wiki,def,--GENERAL--,g,--SITE--,github.com,--SOFTWARE--,mas,masd,itu,itud,s,--MUSIC--,isong,iart,ialb,lsong,lart|}${3: "${4:optional search text}"})</string>
 	<key>name</key>
 	<string>Insert smart link</string>
 	<key>scope</key>
